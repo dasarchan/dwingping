@@ -1,0 +1,10 @@
+
+{% if lastFive %}
+    <ul>
+    {% for game in lastFive %}
+        <li><a href="/entry/{{ game.id }}/">{{ game.__str__ }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No games are available.</p>
+{% endif %}
